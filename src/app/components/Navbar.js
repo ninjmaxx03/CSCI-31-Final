@@ -1,5 +1,6 @@
 import Button from './Button'
 import Tag from './Tag'
+import { ServerStackIcon } from '@heroicons/react/24/solid'
 
 const navigationButtons = [
   {
@@ -17,7 +18,9 @@ const navigationButtons = [
 export default function Navbar() {
   return (
     <nav className="flex justify-between bg-indigo-50 p-6 items-center sticky top-0 shadow-lg">
-      <div className="logo bg-indigo-600 rounded-full p-6 hover:scale-105 transition-all cursor-pointer"></div>
+      <a href = "/" className=" p-6 bg-red rounded-full hover:scale-100 transition-all cursor-pointrer">
+        <ServerStackIcon className="h-14 w-14 text-stone-400" />
+        </a>
       <div className="flex gap-x-4 items-center">
         {navigationButtons.map(({ href,title, isNew}) => (
           <>
